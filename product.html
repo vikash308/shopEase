@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html"><div class="logo">ShopEase</div></a>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products, brands and more" id="searchBar">
+      <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+    </div>
+
+    <div class="nav-icons">
+      <a href="wishlist.html"><button class="nav-btn" id="wish"><i
+            class="fa-solid fa-heart"></i><span>Wishlist</span></button></a>
+      <a href="order.html"><button class="nav-btn" id="order"><i
+            class="fa-solid fa-box"></i><span>Orders</span></button></a>
+      <a href="cart.html"><button class="nav-btn" id="cart"><i
+            class="fa-solid fa-cart-shopping"></i><span>Cart</span></button></a>
+      <a href="login.html"><button class="nav-btn" id="login"><i
+            class="fa-solid fa-user"></i><span>Login</span></button></a>
+    </div>
+  </nav>
+
+   <div class="outer">
+    <div class="first" id="first">
+      <i class="fa-regular fa-heart"></i>
+      <div class="button">
+        <button id="cartBtn"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        <button id="buyNow">Buy Now</button>
+      </div>
+    </div>
+    <div class="second">
+      <div class="item-detail"></div>
+      <div class="description"></div>
+
+      <div class="policy">
+        <div class="icons">
+          <i class="fa-solid fa-arrow-turn-up"></i>
+          <p></p>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-truck"></i>
+          <p>Free Delivery</p>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-money-bill"></i>
+          <p>Cash on Delivery</p>
+        </div>
+        <div class="icons" id="warrenty">
+          <i class="fa-solid fa-circle-check"></i>
+          <p>1 Year Warranty</p>
+        </div>
+      </div>
+
+      <!-- Reviews -->
+      <div id="review"></div>
+    </div>
+  </div>
+
+  <!-- Buy Now Form -->
+<div class="overlay">
+  <div class="buy-now-form-container">
+  <i class="fa-solid fa-xmark"></i>
+  <h2>Enter Your Details</h2>
+  <form id="buyNowForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" />
+
+    <label for="address">Shipping Address</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="payment">Payment Method</label>
+    <select id="payment" name="payment" required>
+      <option value="">Select</option>
+      <option value="cod">Cash on Delivery</option>
+      <option value="upi">UPI</option>
+      <option value="card">Credit/Debit Card</option>
+    </select>
+
+    <button type="submit">Submit Order</button>
+  </form>
+</div>
+
+</div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 ShopEase. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a> |
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/nav.js"></script>
+  <script src="./assets/js/product.js"></script>
+</body>
+</html>
